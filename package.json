@@ -1,0 +1,33 @@
+{
+  "name": "parcel-project-template",
+  "version": "2.0.0",
+  "description": "- Асинхронность в JavaScript   - Однопоточность и многопоточность   - Отоложенные вызовы (планирование)   - Web workers для «многопоточности»   - Service workers для «перехвата» запросов от документа (кеширование)   - [Статья](https://bitsofco.de/web-workers-vs-service-workers-vs-worklets) - Планирование: window.setTimeout() и window.setInterval() - Цикл событий (event loop)   - [Площадка](http://latentflip.com/loupe)   - setTimeout(N) и setTimeout(0) - Мастерская: оповещение - Мастерская: «надоедалка» подписки   - Bootstrap для CSS   - Bootstrap Native для JS - Встроенный объект Date   - Создание   - Разница времени   - Date.now() и new Date().getTime()   - [Библиотека date-fns](https://date-fns.org/) - Мастерская: таймер",
+  "homepage": "https://Pozniak17.github.io/goit-js-hw-09",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-09/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+  },
+  "keywords": [],
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+  },
+  "dependencies": {
+    "flatpickr": "^4.6.13",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "main": "index.js"
+}
