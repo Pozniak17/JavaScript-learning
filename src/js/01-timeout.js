@@ -1,36 +1,63 @@
 import '../css/common.css';
 
 /*
- * Метод window.setTimeout(callback, delay, args)
+ ! Метод window.setTimeout(callback, delay, args)
  */
 
-// console.log('До вызова setTimeout');
+// const logMessage = () => {
+//   console.log('Лог при виклику callback-функції через 3 секунди');
+// };
 
-// setTimeout(() => {
-//   console.log('1 - Внутри callback для setTimeout');
-// }, 2000);
+// console.log('До виклику setTimeout');
 
-// setTimeout(() => {
-//   console.log('2 - Внутри callback для setTimeout');
-// }, 1000);
+//* передаємо аргументи для виклику третім, четвертим аргументом, x = 5
+// setTimeout(
+//   x => {
+//     console.log(x);
+//     console.log('1 -Всередині callback для setTimeout');
+//   },
+//   2000,
 
-// console.log('После вызова setTimeout');
+//* аргумент який піде в x
+//   5
+// );
 
-/*
- * Очистка таймаута с clearTimeout(timeoutId)
- */
+//* передаємо аргументи для виклику третім, четвертим аргументом, y = 50
+// setTimeout(
+//   y => {
+//     console.log(y);
+//     console.log('2 -Всередині callback для setTimeout');
+//   },
+//   1000,
 
-const logger = time => {
-  console.log(`Лог через ${time}ms, потому что не отменили таймаут`);
-};
+//* аргумент який піде в y
+//   50
+// );
 
-const timerId = setTimeout(logger, 2000, 2000);
+// console.log('Після виклику setTimeout');
 
-console.log(timerId);
+//* приклад з циклом, спочатку пройде весь синхронний код, а потім виконається setTimeout, що вижче👆
+// for (let index = 0; index < 10000; index++) {
+//   console.log(index);
+// }
 
-const shouldCancelTimer = Math.random() > 0.3;
-console.log(shouldCancelTimer);
+//! Очистка таймаута з clearTimeout(timeoutId)
 
-if (shouldCancelTimer) {
-  clearTimeout(timerId);
-}
+// const logger = time => {
+//   console.log(`Лог через ${time}ms, тому що не відмінили таймаут`);
+// };
+
+//* третій аргумент 3000, йде в time, що вижче👆
+// const timerId = setTimeout(logger, 2000, 3000);
+
+//* це як id сетаймаута
+// console.log(timerId);
+
+//* довільна функція, показує true або false
+// const shouldCancelTimer = Math.random() > 0.3;
+// console.log(shouldCancelTimer);
+
+//* передаємо в clearTimeout() ідентифікатор, якщо logger = true, setTimeout не виконається
+// if (shouldCancelTimer) {
+//   clearTimeout(timerId);
+// }
