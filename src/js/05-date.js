@@ -8,8 +8,15 @@ import '../css/common.css';
  - Date.now()
 */
 
+//* вбудований конструктор Date(), показує дату в вигляді об'єкту. Але показується як рядок, викликали конструктор, отримали екземпляр
 const date1 = Date.now();
+
 console.log('date1', date1);
+
+// console.log(date.getTime());//* з 1970 00:00
+
+//todo getTime() показує поточний час в мілісекундах
+//todo в чому проблема const date1 = new Date(), ми кожен раз створюємо об'єкт екземпляр, який не рекомендовано. Краще використовувати const date1 = Date.now(); Цей метод не створює екземпляр, він повертає поточне значення часу в мілісекундах. І нічого не змінюється, і ми не створюємо лишні об'єкти.
 
 setTimeout(() => {
   const date2 = Date.now();
@@ -17,5 +24,5 @@ setTimeout(() => {
   console.log('date1', date1);
   console.log('date2', date2);
 
-  console.log(date2 - date1);
+  console.log(date2 - date1); //* 3с, тому що в сетаймауті на 3с пізніше за date1
 }, 3000);
